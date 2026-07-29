@@ -1,0 +1,27 @@
+# ============================================================================
+#  SQLi test targets  -  for the Bruce "SQL Injection.js" tool
+# ----------------------------------------------------------------------------
+#  Format:   label | full-url-with-the-injection-point-at-the-END
+#  The tool appends its payload to the end of the URL, so the URL must finish
+#  on a PARAMETER VALUE (e.g. ...?id=1  ->  ...?id=1'  ).
+#  Lines starting with # are ignored. Blank lines too.
+#
+#  ONLY test targets you are allowed to. The vulnweb.com hosts are PUBLIC,
+#  intentionally-vulnerable test sites (Acunetix) — legal to test.
+#  NOTE: these public hosts go UP/DOWN often. "baseline request failed /
+#  connection refused" usually means THAT host is down, not a bug — just try
+#  another one. For reliable practice, self-host a local lab (bottom).
+# ============================================================================
+
+# --- known working (checked) ---
+testasp id (MSSQL)   | http://testasp.vulnweb.com/showthread.asp?id=1
+testaspnet news      | http://testaspnet.vulnweb.com/ReadNews.aspx?id=1
+
+# --- often down, retry later ---
+vulnweb cat          | http://testphp.vulnweb.com/listproducts.php?cat=1
+vulnweb artist       | http://testphp.vulnweb.com/artists.php?artist=1
+
+# --- your own local labs: uncomment and set your IP (most reliable) ---
+# SQLi-labs #1       | http://192.168.1.50/sqli-labs/Less-1/?id=1
+# bWAPP sqli         | http://192.168.1.50/bWAPP/sqli_1.php?title=1
+# Mutillidae         | http://192.168.1.50/mutillidae/index.php?page=user-info.php&username=1
