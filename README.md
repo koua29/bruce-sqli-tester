@@ -62,7 +62,7 @@ Le matériel utilisé pour ce projet — liens affiliés Amazon :
 
 ## 🙏 Credits & License
 
-- Script: **koua29** (Arnaud). Runs on the excellent **[Bruce firmware](https://github.com/BruceDevices/firmware)**.
+- Script: **koua29**. Runs on the excellent **[Bruce firmware](https://github.com/BruceDevices/firmware)**.
 - Released under the **MIT License** — see [LICENSE](LICENSE).
 
 ## ☕ Coffee?
