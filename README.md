@@ -1,20 +1,18 @@
 # 💉 SQLi Tester — Bruce / LilyGO T-Embed CC1101
 
+<p align="center">🇺🇸 <b>English</b> · 🇫🇷 <a href="README.fr.md">Français</a></p>
+
 [![Bruce firmware](https://img.shields.io/badge/firmware-Bruce-8A2BE2?logo=github)](https://github.com/BruceDevices/firmware) [![Device](https://img.shields.io/badge/device-LilyGO%20T--Embed%20CC1101-1E90FF)](https://github.com/BruceDevices/firmware) [![Language](https://img.shields.io/badge/script-JavaScript%20(BJS)-F7DF1E)](https://github.com/BruceDevices/firmware) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-> **EN** — A small **SQL-injection tester** for the Bruce JS interpreter. Point it at a URL with a parameter, and it runs error-based, time-based (blind) and boolean-based checks against a clean baseline — right from the device, with a clean picto UI. Targets are read from an editable `sqli_targets.txt`.
-
-> **FR** — Un petit **testeur d'injection SQL** pour l'interpréteur JS de Bruce. Vise une URL avec un paramètre, et il lance des tests **error-based**, **time-based (aveugle)** et **boolean-based** par rapport à une réponse de référence — depuis l'appareil, avec une interface à pictogrammes. Les cibles sont lues depuis un fichier `sqli_targets.txt` éditable.
+A small **SQL-injection tester** for the Bruce JS interpreter. Point it at a URL with a parameter, and it runs error-based, time-based (blind) and boolean-based checks against a clean baseline — right from the device, with a clean picto UI. Targets are read from an editable `sqli_targets.txt`.
 
 ![SQLi Tester](docs/hero.jpg)
 
-## ⚠️ Legal / Légal
+## ⚠️ Legal
 
-**EN — For authorized security testing only.** Use it exclusively on **your own** servers or targets you have **explicit written permission** to test (the bundled `testphp/testasp.vulnweb.com` are public, intentionally-vulnerable practice sites). Testing systems without authorization is illegal.
+**For authorized security testing only.** Use it exclusively on **your own** servers or targets you have **explicit written permission** to test (the bundled `testphp/testasp.vulnweb.com` are public, intentionally-vulnerable practice sites). Testing systems without authorization is illegal.
 
-**FR — Pour du test de sécurité autorisé uniquement.** À utiliser exclusivement sur **tes propres** serveurs ou des cibles pour lesquelles tu as une **autorisation écrite explicite** (les hôtes `vulnweb.com` fournis sont des sites d'entraînement publics volontairement vulnérables). Tester un système sans autorisation est illégal.
-
-## ✨ Features / Fonctions
+## ✨ Features
 
 - 🎯 **Target menu from a file** — pick a target directly from `sqli_targets.txt` (label + URL), or type one manually. No long typing on the device.
 - 🔎 **3 detection methods** over a clean baseline request:
@@ -50,15 +48,28 @@ Bruce's JS interpreter exposes **no raw TCP socket** and **no `encodeURIComponen
 - The public `vulnweb.com` practice hosts go up/down often — *"baseline request failed / connection refused"* usually means **that host is down**, not a bug. Try another, or self-host a lab (DVWA, SQLi-Labs, bWAPP) over HTTP for reliable practice.
 - This is a **first-pass detector**, not a full exploitation framework. Confirm findings with a real tool on an authorized target.
 
-## 🛒 Matériel / Hardware
+## 🛒 Hardware
 
-Accessoires utiles pour ce projet — liens affiliés Amazon :
+*Amazon affiliate links: if you buy through these links, the project earns a small commission at no extra cost to you.*
 
-| [<img src="docs/amazon-B0D45MSMJR.jpg" width="200" alt="Anker 545 power bank (10 000 mAh)">](https://www.amazon.com/dp/B0D45MSMJR?linkCode=ll2&tag=koua29bsqlitester-20&ref_=as_li_ss_tl) | [<img src="docs/amazon-B0C1FCZM94.jpg" width="200" alt="433 MHz SMA antenna (2-pack)">](https://www.amazon.com/dp/B0C1FCZM94?linkCode=ll2&tag=koua29bsqlitester-20&ref_=as_li_ss_tl) | [<img src="docs/amazon-B0B7NVMBPL.jpg" width="200" alt="SanDisk 64 GB microSD (2-pack)">](https://www.amazon.com/dp/B0B7NVMBPL?linkCode=ll2&tag=koua29bsqlitester-20&ref_=as_li_ss_tl) |
-|:---:|:---:|:---:|
-| 🔋 **[Anker 545 power bank (10 000 mAh)](https://www.amazon.com/dp/B0D45MSMJR?linkCode=ll2&tag=koua29bsqlitester-20&ref_=as_li_ss_tl)**<br><sub>Pour faire tourner le T-Embed loin d'une prise</sub> | 📡 **[433 MHz SMA antenna (2-pack)](https://www.amazon.com/dp/B0C1FCZM94?linkCode=ll2&tag=koua29bsqlitester-20&ref_=as_li_ss_tl)**<br><sub>Antenne sub-GHz pour la radio CC1101</sub> | 💾 **[SanDisk 64 GB microSD (2-pack)](https://www.amazon.com/dp/B0B7NVMBPL?linkCode=ll2&tag=koua29bsqlitester-20&ref_=as_li_ss_tl)**<br><sub>Pour les thèmes, scripts et captures Bruce</sub> |
+<table>
+<tr>
+<td align="center" width="33%">
+  <a href="https://www.amazon.com/dp/B0D45MSMJR?linkCode=ll2&amp;tag=koua29bsqlitester-20&amp;ref_=as_li_ss_tl"><img src="docs/amazon-B0D45MSMJR.jpg" width="200" alt="Anker 545 power bank (10,000 mAh)"></a><br>
+  <b><a href="https://www.amazon.com/dp/B0D45MSMJR?linkCode=ll2&amp;tag=koua29bsqlitester-20&amp;ref_=as_li_ss_tl">Anker 545 power bank (10,000 mAh)</a></b><br><sub>Keeps the T-Embed running away from an outlet</sub>
+</td>
+<td align="center" width="33%">
+  <a href="https://www.amazon.com/dp/B0C1FCZM94?linkCode=ll2&amp;tag=koua29bsqlitester-20&amp;ref_=as_li_ss_tl"><img src="docs/amazon-B0C1FCZM94.jpg" width="200" alt="433 MHz SMA antenna (2-pack)"></a><br>
+  <b><a href="https://www.amazon.com/dp/B0C1FCZM94?linkCode=ll2&amp;tag=koua29bsqlitester-20&amp;ref_=as_li_ss_tl">433 MHz SMA antenna (2-pack)</a></b><br><sub>Sub-GHz antenna for the CC1101 radio</sub>
+</td>
+<td align="center" width="33%">
+  <a href="https://www.amazon.com/dp/B0B7NVMBPL?linkCode=ll2&amp;tag=koua29bsqlitester-20&amp;ref_=as_li_ss_tl"><img src="docs/amazon-B0B7NVMBPL.jpg" width="200" alt="SanDisk 64 GB microSD (2-pack)"></a><br>
+  <b><a href="https://www.amazon.com/dp/B0B7NVMBPL?linkCode=ll2&amp;tag=koua29bsqlitester-20&amp;ref_=as_li_ss_tl">SanDisk 64 GB microSD (2-pack)</a></b><br><sub>For Bruce themes, scripts and captures</sub>
+</td>
+</tr>
+</table>
 
-<sub>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises. · As an Amazon Associate I earn from qualifying purchases.</sub>
+<sub>As an Amazon Associate I earn from qualifying purchases.</sub>
 
 ## 🙏 Credits & License
 
